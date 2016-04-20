@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayPrice(int num) {
         TextView textView = (TextView) findViewById(R.id.price_text_view);
-        textView.setText(NumberFormat.getCurrencyInstance().format(num));
+        String priceMsg = "Total: "+NumberFormat.getCurrencyInstance().format(num);
+        priceMsg = priceMsg+" \n Thank you!";
+        textView.setText(priceMsg);
     }
 
     public void incrementCoffeeNum(View view) {
